@@ -4,18 +4,22 @@ import { nanoid } from "nanoid"
 const handleUrlShortRequest = async(req ,res)=>{
     console.log(req.body)
     const id = nanoid(8)
-
-    const shorturl = await  url.create({
-       ShortId : id ,
-       redirectUrl :  req.body.url ,
-       visits:[]
-    })
-    console.log(shorturl)
-    if(shorturl){
-    res.json(`http://localhost:8000/api/url/${id}`).status(200)
-    }else{
-        res.status(500).send("Error")
+    try {
+        const shorturl = await  url.create({
+            ShortId : id ,
+            redirectUrl :  req.body.url ,
+            visits:[]
+         })
+         console.log(shorturl)
+         if(shorturl){
+         res.json(`http://localhost:8000/api/url/${id}`).status(200)
+         }else{
+             res.status(500).send("Error")
+         }
+    } catch (error) {
+        console.log(error.message)
     }
+   
 }
 
 
