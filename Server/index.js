@@ -10,7 +10,14 @@ const port = 8000
 //db connection 
 connectToDb()
 
-app.use(cors())
+
+var corsOptions = {
+    origin: 'https://minimizer.vercel.app',
+    optionsSuccessStatus: 200 
+  }
+
+//MiddleWares
+app.use(cors(corsOptions))
 app.use(express.json({urlencoded :true }))
 app.use("/api/url" , urlRouter )
 
