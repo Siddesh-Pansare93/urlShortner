@@ -11,10 +11,12 @@ const port = 8000
 connectToDb()
 
 
-var corsOptions = {
+const corsOptions = {
     origin: 'https://minimizer.vercel.app',
-    optionsSuccessStatus: 200 
-  }
+    methods: ['GET', 'POST', 'PUT', 'DELETE'], 
+    allowedHeaders: ['Content-Type', 'Authorization'], 
+    optionsSuccessStatus: 200
+};
 
 //MiddleWares
 app.use(cors(corsOptions))
