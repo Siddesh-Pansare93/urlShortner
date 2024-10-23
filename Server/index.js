@@ -15,7 +15,7 @@ connectToDb()
 
 //MiddleWares
 app.use(cors({
-    origin: 'https://minimizer.vercel.app',
+    origin: 'https://minimizer.vercel.app/',
     credentials:true
 }))
 app.use(express.json({urlencoded :true }))
