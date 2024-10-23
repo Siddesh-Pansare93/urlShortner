@@ -15,15 +15,15 @@ connectToDb()
 
 //MiddleWares
 app.use(cors({
-    origin: 'https://minimizer.vercel.app/',
+    origin: '*',
     credentials:true
 }))
-app.options('*', cors({
-    origin: 'https://minimizer.vercel.app',
-    credentials: true,
-    allowedHeaders: ['Content-Type', 'Authorization'],
-    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS']
-}));
+// app.options('*', cors({
+//     origin: 'https://minimizer.vercel.app',
+//     credentials: true,
+//     allowedHeaders: ['Content-Type', 'Authorization'],
+//     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS']
+// }));
 app.use(express.json({urlencoded :true }))
 app.use("/api/url" , urlRouter )
 
