@@ -14,10 +14,10 @@ connectToDb()
 
 
 //MiddleWares
-// app.use(cors({
-//     origin: 'https://minimizer.vercel.app/',
-//     credentials:true
-// }))
+app.use(cors({
+    origin: 'https://minimizer.vercel.app/',
+    credentials:true
+}))
 app.options('*', cors({
     origin: 'https://minimizer.vercel.app',
     credentials: true,
