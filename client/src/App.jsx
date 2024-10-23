@@ -10,7 +10,7 @@ function App() {
   const urlRef = useRef(null)
 
   const handleShorturl = async () => {
-    const response = await fetch("https://minimizer-api.vercel.app/api/url", {
+    const response = await fetch("", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"

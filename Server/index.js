@@ -1,7 +1,15 @@
 import express from 'express';
+import dotenv from 'dotenv' 
 import connectToDb from './connect.js';
 import urlRouter from './src/routes/url.route.js';
 import cors from 'cors';
+
+
+
+dotenv.config({
+    path : "./.env"
+})
+
 
 const app = express();
 const port = 8000;
