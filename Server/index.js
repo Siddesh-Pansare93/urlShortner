@@ -11,9 +11,8 @@ connectToDb();
 
 // CORS Configuration
 const corsOptions = {
-    origin: 'https://minimizer.vercel.app',  // Allow only your frontend
+    origin: 'https://minimizer.vercel.app/',  // Allow only your frontend
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],  // Allowed methods
-    credentials: true,  // Allow credentials like cookies
     allowedHeaders: ['Content-Type', 'Authorization'],  // Allow specific headers
     optionsSuccessStatus: 200  // Response for preflight requests
 };
