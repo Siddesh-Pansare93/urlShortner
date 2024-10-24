@@ -10,7 +10,7 @@ function App() {
   const urlRef = useRef(null)
 
   const handleShorturl = async () => {
-    const response = await fetch("", {
+    const response = await fetch("http://localhost:8000/api/url", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
